@@ -1,0 +1,146 @@
+/* 
+public class PrimeNumbers {
+    
+    public static boolean isPrime(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("adad yek ta sad:");
+        for (int i = 1; i <= 100; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+    }
+}
+*/
+
+/*
+import java.util.Scanner;
+
+public class PerfectNumber {
+
+    public static boolean isPerfectNumber(int num) {
+        int sum = 0;
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+        return sum == num;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("lotfaa yek adad vared konid:");
+        int number = scanner.nextInt();
+        scanner.close();
+
+        if (isPerfectNumber(number)) {
+            System.out.println(number + "yek adad amel ast!");
+        } else {
+            System.out.println(number + "yek adad kamel nist!");
+        }
+    }
+}
+
+*/
+
+/* 
+import java.util.Scanner;
+
+public class PalindromeChecker {
+
+    public static boolean isPalindrome(int num) {
+        int originalNum = num;
+        int reversedNum = 0;
+
+        while (num != 0) {
+            int digit = num % 10;
+            reversedNum = reversedNum * 10 + digit;
+            num /= 10;
+        }
+
+        return originalNum == reversedNum;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("lotfaa yek adad vared konid: ");
+        int number = scanner.nextInt();
+        scanner.close();
+
+        if (isPalindrome(number)) {
+            System.out.println(number + "yek adad palinrom ast!");
+        } else {
+            System.out.println(number + "yek adad palinrom nist!");
+        }
+    }
+}
+*/
+
+
+
+
+/* 
+import java.util.Scanner;
+
+public class NumberToWords {
+
+    private static final String[] units = {
+            "", "yek", "do", "seh", "chahar", "panj", "shesh", "haft", "hasht", "noh", "dah",
+            "yazdah", "davazdah", "sinzdah", "chahardah", "panzdah", "shanzdah", "hefdah", "hegdah", "nozdah"
+    };
+
+    private static final String[] tens = {
+            "", "", "bist", "sy", "chehl", "panjah", "shast", "haftad", "hashtad", "navad"
+    };
+
+    private static final String[] hundreds = {
+            "", "yeksad", "divist", "sisad", "chaharsad", "pansad", "sheshsad", "haftsad", "hashtsad", "nohsad"
+    };
+
+    public static String convert(int num) {
+        if (num == 0) {
+            return "sefr";
+        }
+
+        String words = "";
+
+        if (num >= 100) {
+            words += hundreds[num / 100] + " ";
+            num %= 100;
+        }
+
+        if (num >= 20) {
+            words += tens[num / 10] + " ";
+            num %= 10;
+        }
+
+        if (num > 0) {
+            words += units[num] + " ";
+        }
+
+        return words.trim();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("lotfaa yek adad ra vared konid: ");
+        int number = scanner.nextInt();
+        scanner.close();
+
+        System.out.println("matn an beh sorat:" + convert(number));
+    }
+}
+*/
